@@ -32,6 +32,21 @@ hr[class="thick"] {
 	border: none;
 }
 
+.vitamins {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.vitamins hr {
+	width: 100%;
+}
+
+.vitamins .first, .vitamins .second {
+	flex-basis: 40%;
+}
+
 	</style>
 
 </head>
@@ -48,6 +63,24 @@ hr[class="thick"] {
 		<p>Serving Size Per Container 10</p>
 	</header>
 	<hr class=thick>
+
+	<div class="vitamins">
+		<p class="first">Vitamin A</p>
+		<p class="second">0%</p>
+		<p>6%</p>
+		<hr>
+		<p class="first">Vitamin C</p>
+		<p class="second">0%</p>
+		<p>2%</p>
+		<hr>
+		<p class="first">Calcium</p>
+		<p class="second">2%</p>
+		<p>15%</p>
+		<hr>
+		<p class="first">Iron</p>
+		<p class="second">6%</p>
+		<p>6%</p>					
+	</div>
 
 </div>
 </div>
