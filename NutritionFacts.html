@@ -12,45 +12,57 @@
 	padding: 0;
 }
 
-	#container {
-		width: 100vw;
-		height: 100vh;
-		display: flex;
-		justify-content: center;
-	}
+#container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
 
 
-	#label {
-		width: 25%;
-		padding: 5px;
-		border: 1px solid black;
-	}
+#label {
+	width: 25%;
+	padding: 5px;
+	border: 1px solid black;
+}
 	
-hr[class="thick"] {
+.thick {
 	height: 10px;
 	background-color: black;
 	border: none;
 }
 
-.vitamins {
+.medium {
+	height: 5px;
+	background-color: black;
+	border: none;
+}
+
+.calories, .vitamins {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: flex-end;
 }
 
-.vitamins hr {
+hr {
 	width: 100%;
 }
 
-.vitamins p {
+p {
 	flex-basis: 20%;
 	text-align: right;
 }
 
-.vitamins .first {
+.first {
 	flex-basis: 50%;
 	text-align: left;
+}
+
+.small {
+	font-size: 0.6em;
+	font-weight: bold;
 }
 
 	</style>
@@ -68,23 +80,51 @@ hr[class="thick"] {
 		<p>Serving Size 1 cup (50mg)</p>
 		<p>Serving Size Per Container 10</p>
 	</header>
+
+	<hr class=thick>
+
+	<div class="calories">
+		<p class="small first">Amount Per Serving</p>
+		<p class="small">Cereal</p>
+		<p class="small">with 1/2 cup 1% milk</p>
+		<hr>
+		<p class="first">Calories</p>
+		<p>190</p>
+		<p>250</p>
+		<hr>
+		<p class="first">Calories from Fat</p>
+		<p>35</p>
+		<p>45</p>
+	</div>
+
+	<hr class=medium>
+
+	<p style='text-align:right'>% Daily Value**</p>
+
+	<div class="content">
+		<p class="first">Total Fat 4g*</p>
+		<p>6%</p>
+		<p>8%</p>
+		<hr>
+	</div>
+
 	<hr class=thick>
 
 	<div class="vitamins">
 		<p class="first">Vitamin A</p>
-		<p class="second">0%</p>
+		<p>0%</p>
 		<p>6%</p>
 		<hr>
 		<p class="first">Vitamin C</p>
-		<p class="second">0%</p>
+		<p>0%</p>
 		<p>2%</p>
 		<hr>
 		<p class="first">Calcium</p>
-		<p class="second">2%</p>
+		<p>2%</p>
 		<p>15%</p>
 		<hr>
 		<p class="first">Iron</p>
-		<p class="second">6%</p>
+		<p>6%</p>
 		<p>6%</p>					
 	</div>
 
