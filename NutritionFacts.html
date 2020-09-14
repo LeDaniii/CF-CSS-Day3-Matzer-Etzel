@@ -10,6 +10,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: arial;
 }
 
 #container {
@@ -21,7 +22,7 @@
 
 
 #label {
-	width: 25%;
+	width: 35%;
 	padding: 5px;
 	border: 1px solid black;
 }
@@ -38,7 +39,7 @@
 	border: none;
 }
 
-.calories, .vitamins {
+.calories, .content, .vitamins, .other {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -50,18 +51,56 @@ hr {
 	width: 100%;
 }
 
-p {
+.short {
+	width: 95%;
+	margin-left: auto;
+}
+
+.calories, .content, .vitamins p {
+	flex-basis: 15%;
+	text-align: right;
+}
+
+div .first {
+	flex-basis: 60%;
+	text-align: left;
+}
+
+div .indent {
+	margin-left: 5%;
+	flex-basis: 55%;
+	text-align: left;
+}
+
+.other p {
 	flex-basis: 20%;
 	text-align: right;
 }
 
-.first {
-	flex-basis: 50%;
+div .first_small {
+	flex-basis: 30%;
+	text-align: left;
+}
+
+div .indent_small {
+	padding-left: 5%;
+	flex-basis: 25%;
 	text-align: left;
 }
 
 .small {
 	font-size: 0.6em;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.bold {
 	font-weight: bold;
 }
 
@@ -84,28 +123,53 @@ p {
 	<hr class=thick>
 
 	<div class="calories">
-		<p class="small first">Amount Per Serving</p>
-		<p class="small">Cereal</p>
-		<p class="small">with 1/2 cup 1% milk</p>
+		<p class="small first bold">Amount Per Serving</p>
+		<p class="small bold">Cereal</p>
+		<p class="small bold">with 1/2 cup 1% milk</p>
 		<hr>
 		<p class="first">Calories</p>
 		<p>190</p>
 		<p>250</p>
-		<hr>
-		<p class="first">Calories from Fat</p>
+		<hr class="short">
+		<p class="indent">Calories from Fat</p>
 		<p>35</p>
 		<p>45</p>
 	</div>
 
 	<hr class=medium>
 
-	<p style='text-align:right'>% Daily Value**</p>
+	<p class="small right">% Daily Value**</p>
 
 	<div class="content">
-		<p class="first">Total Fat 4g*</p>
+		<p class="first bold">Total Fat 4g*</p>
 		<p>6%</p>
 		<p>8%</p>
+		<hr class="short">
+		<p class="indent">Saturated Fat 1.5g</p>
+		<p>8%</p>
+		<p>13%</p>
+		<hr class="short">
+		<p class="indent">Trans Fat 0g</p>
 		<hr>
+		<p class="first bold">Cholesterol 0mg</p>
+		<p>0%</p>
+		<p>3%</p>
+		<hr>
+		<p class="first bold">Sodium 190mg</p>
+		<p>8%</p>
+		<p>11%</p>
+		<hr>
+		<p class="first bold">Total Carbohydrate 39g</p>
+		<p>13%</p>
+		<p>15%</p>
+		<hr class="short">
+		<p class="indent">Dietary Fiber 6g</p>
+		<p>24%</p>
+		<p>24%</p>
+		<hr class="short">
+		<p class="indent">Sugars</p>
+		<hr>
+		<p class="first">Protein 4g</p>
 	</div>
 
 	<hr class=thick>
@@ -125,8 +189,49 @@ p {
 		<hr>
 		<p class="first">Iron</p>
 		<p>6%</p>
-		<p>6%</p>					
+		<p>6%</p>
+		<hr>					
 	</div>
+
+<p class="small left">Amount in Cereal. with 1/2 cup % milk contributes an additional 60 Calories (10 Calories from Fat), 1 g Total Fat (1 g Saturated Fat), 10mg Cholesterol, 70 mg Sodium, 7 g Total Carbohydrate (6 g Sugars), 5 g Protein.</p>
+<p class="small left">**Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs:</p>
+<br>
+
+	<div class="other small">
+		<hr>
+		<p class="first_small left">Trans Fat</p>
+		<p class="first_small left">Less than</p>
+		<p>65g</p>
+		<p>80g</p>
+		<hr>
+		<p class="first_small indent_small">Saturated Fat</p>
+		<p class="first_small left">Less than</p>
+		<p class="left">20g</p>
+		<p>25g</p>
+		<hr>	
+		<p class="first_small left">Cholesterol</p>
+		<p class="first_small left">Less than</p>
+		<p>300g</p>
+		<p>300g</p>
+		<hr>
+		<p class="first_small left">Sodium</p>
+		<p class="first_small left">Less than</p>
+		<p>2,400g</p>
+		<p>2,400g</p>
+		<hr>
+		<p class="first_small left">Total Carbohydrate</p>
+		<p class="first_small left"></p>
+		<p>2,400g</p>
+		<p>2,400g</p>
+		<hr>	
+		<p class="first_small left">Dietary Fiber</p>
+		<p class="first_small left"></p>
+		<p>25g</p>
+		<p>30g</p>
+		<hr>							
+	</div>
+
+
 
 </div>
 </div>
