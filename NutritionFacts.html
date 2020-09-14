@@ -6,6 +6,8 @@
 	<title>Nutrition Facts</title>
 
 	<style type="text/css" media="screen">
+
+/*Resetting default values and using a*/
 	
 * {
 	margin: 0;
@@ -15,16 +17,20 @@
 
 #container {
 	width: 100vw;
-	height: 100vh;
 	display: flex;
 	justify-content: center;
 }
-
 
 #label {
 	width: 35%;
 	padding: 5px;
 	border: 1px solid black;
+}
+
+/*Constructing the dividers using hr plus classes*/
+
+hr {
+	width: 100%;
 }
 	
 .thick {
@@ -39,6 +45,13 @@
 	border: none;
 }
 
+.short {
+	width: 95%;
+	margin-left: auto;
+}
+
+/*Setting up three different types of flex boxes for the different tables depending on the required formatting*/
+
 .calories, .content, .vitamins, .other {
 	display: flex;
 	flex-wrap: wrap;
@@ -47,17 +60,8 @@
 	align-items: flex-end;
 }
 
-hr {
-	width: 100%;
-}
-
-.short {
-	width: 95%;
-	margin-left: auto;
-}
-
 .calories, .content, .vitamins p {
-	flex-basis: 15%;
+	flex-basis: 20%;
 	text-align: right;
 }
 
@@ -73,27 +77,28 @@ div .indent {
 }
 
 .other p {
-	flex-basis: 20%;
-	text-align: right;
+	flex-basis: 15%;
 }
 
-div .first_small {
-	flex-basis: 30%;
-	text-align: left;
+div .first_four_cols {
+	flex-basis: 35%;
 }
 
-div .indent_small {
+div .indent_four_cols {
 	padding-left: 5%;
-	flex-basis: 25%;
-	text-align: left;
+	flex-basis: 30%;
 }
+
+.final {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+/*Applying text styling*/
 
 .small {
 	font-size: 0.6em;
-}
-
-.left {
-	text-align: left;
 }
 
 .right {
@@ -116,16 +121,16 @@ div .indent_small {
 
 	<header>
 		<h1>Nutrition Facts</h1>
-		<p>Serving Size 1 cup (50mg)</p>
+		<p>Serving Size 1 cup (50g)</p>
 		<p>Serving Size Per Container 10</p>
 	</header>
 
 	<hr class=thick>
 
 	<div class="calories">
-		<p class="small first bold">Amount Per Serving</p>
+		<p class="first small bold">Amount Per Serving</p>
 		<p class="small bold">Cereal</p>
-		<p class="small bold">with 1/2 cup 1% milk</p>
+		<p class="small bold">with 1/2 <br> cup 1% <br> milk</p>
 		<hr>
 		<p class="first">Calories</p>
 		<p>190</p>
@@ -139,6 +144,8 @@ div .indent_small {
 	<hr class=medium>
 
 	<p class="small right">% Daily Value**</p>
+
+	<hr>
 
 	<div class="content">
 		<p class="first bold">Total Fat 4g*</p>
@@ -193,50 +200,53 @@ div .indent_small {
 		<hr>					
 	</div>
 
-<p class="small left">Amount in Cereal. with 1/2 cup % milk contributes an additional 60 Calories (10 Calories from Fat), 1 g Total Fat (1 g Saturated Fat), 10mg Cholesterol, 70 mg Sodium, 7 g Total Carbohydrate (6 g Sugars), 5 g Protein.</p>
-<p class="small left">**Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs:</p>
+<p class="small">Amount in Cereal. with 1/2 cup % milk contributes an additional 60 Calories (10 Calories from Fat), 1 g Total Fat (1 g Saturated Fat), 10mg Cholesterol, 70 mg Sodium, 7 g Total Carbohydrate (6 g Sugars), 5 g Protein.</p>
+<p class="small">**Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs:</p>
 <br>
 
 	<div class="other small">
-		<p class="first_small left"></p>
-		<p class="first_small left">Calories:</p>
+		<p class="first_four_cols"></p>
+		<p class="first_four_cols">Calories:</p>
 		<p>2,000</p>
 		<p>2,500</p>
 		<hr>
-		<hr>
-		<p class="first_small left">Trans Fat</p>
-		<p class="first_small left">Less than</p>
+		<p class="first_four_cols">Trans Fat</p>
+		<p class="first_four_cols">Less than</p>
 		<p>65g</p>
 		<p>80g</p>
-		<hr>
-		<p class="first_small indent_small">Saturated Fat</p>
-		<p class="first_small left">Less than</p>
-		<p class="left">20g</p>
-		<p>25g</p>
-		<hr>	
-		<p class="first_small left">Cholesterol</p>
-		<p class="first_small left">Less than</p>
+		<p class="first_four_cols indent_four_cols">Saturated Fat</p>
+		<p class="first_four_cols">Less than</p>
+		<p class="">20g</p>
+		<p>25g</p>	
+		<p class="first_four_cols">Cholesterol</p>
+		<p class="first_four_cols">Less than</p>
 		<p>300g</p>
 		<p>300g</p>
-		<hr>
-		<p class="first_small left">Sodium</p>
-		<p class="first_small left">Less than</p>
+		<p class="first_four_cols">Sodium</p>
+		<p class="first_four_cols">Less than</p>
 		<p>2,400g</p>
 		<p>2,400g</p>
-		<hr>
-		<p class="first_small left">Total Carbohydrate</p>
-		<p class="first_small left"></p>
+		<p class="first_four_cols">Total Carbohydrate</p>
+		<p class="first_four_cols"></p>
 		<p>2,400g</p>
-		<p>2,400g</p>
-		<hr>	
-		<p class="first_small left">Dietary Fiber</p>
-		<p class="first_small left"></p>
+		<p>2,400g</p>	
+		<p class="first_four_cols indent_four_cols">Dietary Fiber</p>
+		<p class="first_four_cols"></p>
 		<p>25g</p>
 		<p>30g</p>
 		<hr>							
 	</div>
 
-
+<p class="small">Calories per gram:</p>
+<div class="final small">
+	<p></p>
+	<p>Fat 9</p>
+	<p>&#8226</p>
+	<p>Carbohydrate 4</p>
+	<p>&#8226</p>
+	<p>Protein 4</p>
+	<p></p>
+</div>
 
 </div>
 </div>
