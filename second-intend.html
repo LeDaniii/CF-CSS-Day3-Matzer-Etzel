@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nutrition Facts</title>
+
+    <style type="text/css" media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+      }
+
+      #label {
+        width: 30%;
+        padding: 5px;
+        border: 1px solid black;
+      }
+
+      hr[class="thick"] {
+        height: 10px;
+        background-color: black;
+        border: none;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px black solid;
+      }
+
+      .subl {
+        flex: 5;
+      }
+
+      .col1 {
+        flex: 1;
+      }
+
+      .vitamins {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 2px black solid;
+      }
+
+      .vitamins hr {
+        width: 100%;
+      }
+
+      .description {
+        font-size: 0.8rem;
+      }
+
+      .value {
+        display: flex;
+        font-size: 0.7rem;
+        justify-content: flex-end;
+        border-bottom: 2px solid black;
+      }
+
+      #proteinBorder {
+        border-bottom: 10px solid black;
+      }
+
+      #inset {
+        margin-left: 1rem;
+        /* text-indent: 1rem; */
+      }
+
+      .cup {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .small {
+        font-size: 0.7rem;
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: 1px solid black;
+      }
+
+      .column1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .sub2,
+      .col2 {
+        font-size: 0.7rem;
+      }
+
+      .sub2 {
+        flex: 3;
+      }
+
+      .col2 {
+        flex: 2;
+      }
+
+      .sub3,
+      .col3 {
+        font-size: 0.7rem;
+      }
+
+      .sub3 {
+        flex: 5;
+      }
+
+      .col3 {
+        flex: 2;
+      }
+
+      .footer {
+        font-size: 0.7rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="label">
+        <header>
+          <div class="grow">
+            <h1>Nutrition Facts</h1>
+          </div>
+          <p>Serving Size 1 cup (50mg)</p>
+          <hr />
+          <p>Serving Size Per Container 10</p>
+        </header>
+        <hr class="thick" />
+        <div class="cup description">
+          <div>with 1/2</div>
+          <div>cup 1%</div>
+        </div>
+        <div class="column description">
+          <div class="subl">Amount Per Serving</div>
+          <div class="col1">Cereal</div>
+          <div class="col1">milk</div>
+        </div>
+        <div class="column">
+          <div class="subl">Calories</div>
+          <div class="col1">190</div>
+          <div class="col1">250</div>
+        </div>
+        <div id="inset" class="column">
+          <div class="subl">Calories from fat</div>
+          <div class="col1">35</div>
+          <div class="col1">45</div>
+        </div>
+        <div class="value">
+          <div>%daily</div>
+          <div>Value <sup> ++ </sup></div>
+        </div>
+        <div class="column">
+          <div class="subl">Total Fat 4g <sup>*</sup></div>
+          <div class="col1">6%</div>
+          <div class="col1">8%</div>
+        </div>
+        <div id="inset" class="column">
+          <div class="subl">Saturated Fat 1.5g</div>
+          <div class="col1">8%</div>
+          <div class="col1">13%</div>
+        </div>
+        <div id="inset" class="column">
+          <div class="subl">Trans Fat 0g</div>
+        </div>
+        <div class="column">
+          <div class="subl">Cholestrol 0mg</div>
+          <div class="col1">0%</div>
+          <div class="col1">3%</div>
+        </div>
+        <div class="column">
+          <div class="subl">Sodium 190mg</div>
+          <div class="col1">8%</div>
+          <div class="col1">11%</div>
+        </div>
+        <div class="column">
+          <div class="subl">Total Carbohydrate 39g</div>
+          <div class="col1">13%</div>
+          <div class="col1">15%</div>
+        </div>
+        <div id="inset" class="column">
+          <div class="subl">Dietary Fiber 39g</div>
+          <div class="col1">24%</div>
+          <div class="col1">24%</div>
+        </div>
+        <div id="inset" class="column">
+          <div class="subl">Sugars 11g</div>
+        </div>
+        <div class="column">
+          <div id="proteinBorder" class="subl">Protein 4g</div>
+        </div>
+        <div class="vitamins">
+          <div class="column">
+            <div class="subl">Vitamin A</div>
+            <div class="col1">0%</div>
+            <div class="col1">6%</div>
+          </div>
+          <div class="column">
+            <div class="subl">Vitamin C</div>
+            <div class="col1">0%</div>
+            <div class="col1">2%</div>
+          </div>
+          <div class="column">
+            <div class="subl">Calcium</div>
+            <div class="col1">2%</div>
+            <div class="col1">15%</div>
+          </div>
+          <div class="column">
+            <div class="subl">Iron</div>
+            <div class="col1">6%</div>
+            <div class="col1">6%</div>
+          </div>
+        </div>
+        <div class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          impedit molestias velit magni quae voluptatum tenetur. Repudiandae
+          harum a provident pariatur debitis neque dolor deserunt eaque officia
+          enim corporis, vero culpa aperiam maxime quasi asperiores delectus,
+          molestias at consequuntur id! Autem perspiciatis voluptate odio
+          aperiam?
+        </div>
+        <div class="small">
+          <div></div>
+          <div class="small1"><span> </span></div>
+          <div class="small1">Calories:</div>
+          <div class="small1">2000</div>
+          <div class="small1">2500</div>
+        </div>
+        <div class="column1">
+          <div class="sub2">Total fat</div>
+          <div class="col2">less than</div>
+          <div class="col2">65g</div>
+          <div class="col2">80g</div>
+        </div>
+        <div class="column1">
+          <div class="sub2">Sturated Fat</div>
+          <div class="col2">less than</div>
+          <div class="col2">20g</div>
+          <div class="col2">25g</div>
+        </div>
+        <div class="column1">
+          <div class="sub2">Cholesterol</div>
+          <div class="col2">less than</div>
+          <div class="col2">300mg</div>
+          <div class="col2">300mg</div>
+        </div>
+        <div class="column1">
+          <div class="sub2">Sodium</div>
+          <div class="col2">less than</div>
+          <div class="col2">2400mg</div>
+          <div class="col2">2400mg</div>
+        </div>
+        <div class="column1">
+          <div class="sub3">Total Carbonhydrate</div>
+          <!-- <div class="col2"></div> -->
+          <div class="col3">300mg</div>
+          <div class="col3">300mg</div>
+        </div>
+        <div class="column">
+          <div class="sub3">Dietry Fiber</div>
+          <div class="col3">25g</div>
+          <div class="col3">30g</div>
+        </div>
+        <div class="footer">
+          <div>fat 9 . Carbonhydrate 4 . Protein4</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
